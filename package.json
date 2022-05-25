@@ -1,0 +1,70 @@
+{
+  "name": "cx-ui-utils",
+  "version": "1.0.0",
+  "description": "CX UI utils library",
+  "private": true,
+  "license": "MIT",
+  "types": "./index.d.ts",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "scripts": {
+    "build:esm": "cross-env NODE_ENV=production BABEL_ENV=esm babel --config-file ./babel.config.js --extensions \".js,.ts\" ./lib --out-dir ./build/esm --ignore \"**/*.test.js,**/*.d.ts\"",
+    "build:es": "cross-env NODE_ENV=production BABEL_ENV=es babel --config-file ./babel.config.js --extensions \".js,.ts\" ./lib --out-dir ./build/es --ignore \"**/*.test.js,**/*.d.ts\"",
+    "build": "yarn build:esm && yarn build:es",
+    "prebuild": "rm -rf ./build",
+    "prepare": "yarn prebuild && yarn build",
+    "eslint": "eslint --ext .js lib/** --fix --color --cache --ignore-path .eslintignor"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@material-ui/core": "^4.9.7",
+    "@material-ui/icons": "^4.5.1",
+    "@material-ui/styles": "^4.9.6",
+    "@svgr/rollup": "5.1.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "classnames": "^2.2.6",
+    "cross-env": "6.0.3",
+    "eslint-config-standard": "14.1.0",
+    "eslint-config-standard-react": "9.2.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "11.0.0",
+    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-standard": "4.0.1",
+    "typescript": "^3.9.2"
+  },
+  "files": [
+    "build",
+    "lib"
+  ],
+  "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.9.6",
+    "@babel/plugin-transform-object-assign": "^7.8.3",
+    "@babel/plugin-transform-react-constant-elements": "^7.9.0",
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "@babel/preset-typescript": "^7.9.0",
+    "@babel/runtime": "^7.9.6",
+    "babel-plugin-optimize-clsx": "^2.6.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "prettier": "^2.0.5"
+  }
+}

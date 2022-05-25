@@ -1,0 +1,72 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "es2017": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "prettier/react"
+  ],
+  "plugins": [
+    "prettier",
+    "react-hooks"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "rules": {
+    "class-methods-use-this": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
+    "import/no-cycle": "off",
+    "jsx-a11y/alt-text": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/href-no-hash": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "jsx-a11y/label-has-for": "off",
+    "jsx-a11y/no-noninteractive-tabindex": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "lines-between-class-members": "warn",
+    "no-nested-ternary": "off",
+    "no-param-reassign": ["error", {
+      "props": true,
+      "ignorePropertyModificationsFor": ["acc"]
+    }],
+    "no-plusplus": "off",
+    "prefer-destructuring": "off",
+    "prefer-template": "warn",
+    "react/no-trailing-spaces": "off",
+    "react/destructuring-assignment": "off",
+    "react/forbid-prop-types": ["warn", { "forbid": ["any", "array"] }],
+    "react/no-unused-state": "warn",
+    "react/require-default-props": "off",
+    "react/jsx-curly-brace-presence": "warn",
+    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
+    "react/prefer-stateless-function": "warn",
+    "yoda": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/prop-types": "off",
+    "prettier/prettier": ["error",
+      {
+        "singleQuote": true,
+        "jsxSingleQuote": true,
+        "bracketSpacing": true,
+        "tabWidth": 4,
+        "printWidth": 100,
+        "endOfLine": "auto",
+        "trailingComma": "all",
+        "arrowParens": "avoid"
+      }
+    ]
+  },
+  "settings": {
+    "import/extensions": [".js", ".jsx"]
+  },
+  "globals": {
+    "proccess": true
+  }
+}

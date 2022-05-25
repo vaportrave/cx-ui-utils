@@ -1,0 +1,28 @@
+// This config is for emitting declarations (.d.ts) only
+// Actual .ts source files are transpiled via babel
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es5",
+    "lib": ["es6", "dom"],
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "experimentalDecorators": true,
+    "baseUrl": "./",
+    "allowSyntheticDefaultImports": true,
+    "noErrorTruncation": true,
+    "allowJs": true,
+    "declaration": true,
+    "noEmit": false,
+    "emitDeclarationOnly": true,
+    "outDir": "build",
+    "rootDir": "./src",
+    "types": ["react"]
+  },
+  "include": ["lib/**/*.ts"],
+  "exclude": [
+    "**/build/"
+  ]
+}
